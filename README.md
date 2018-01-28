@@ -27,7 +27,7 @@ To confirm that you have npm installed you can run this command in your terminal
 npm -v
 ```
 
-## Installing Node Packages
+### Installing Node Packages
 
 In the terminal execute the following command to install all node dependencies (see package.json for list):
 
@@ -69,7 +69,7 @@ step
 - step_description: string
 - completed: boolean
 
-## Run
+# Run
 
 To run the application and connect to the Express server execute the following command in the server.js file:
 
@@ -77,7 +77,7 @@ To run the application and connect to the Express server execute the following c
 node server.js
 ```
 
-## Technologies Used
+# Technologies Used
 
 * Javascript and jQuery
 * Node.js
@@ -88,7 +88,7 @@ node server.js
 * Handlebars.js for client-side templating
 
 
-## Authors
+# Authors
 
 **Emma Pankey** (https://github.com/emmapankey)
 **Justin Rice** (https://github.com/jsrice7391)
