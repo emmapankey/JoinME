@@ -1,6 +1,6 @@
 This app can be found at: https://dry-fjord-23187.herokuapp.com/
 
-# JoinMe
+# About
 
 JS and Node.js app using Express server framework and Sequelize ORM with MySQL dialect for database.
 
