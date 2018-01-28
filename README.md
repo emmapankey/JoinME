@@ -1,13 +1,17 @@
-app can be found at: https://dry-fjord-23187.herokuapp.com/
+This app can be found at: https://dry-fjord-23187.herokuapp.com/
 
 # JoinMe
-JoinME is a social based project tracking platform for people on the go.  Allowing the user to Enter and track projects/goals,  Share and invite other people,  Search for active projects,  Get notified of user progress.
-## Getting Started
+
+JS and Node.js app using Express server framework and Sequelize ORM with MySQL dialect for database.
+
+JoinME is a personal goal tracking platform that allows the user to enter and track projects/goals, share them with other users, and search for active projects/goals to join in an effort to increase productivity, reach goal targets more effectively, and provide inspiration for setting new goals.
+
+# Getting Started
 
 First clone this repository:
 
 ```
-https://github.com/jsrice7391/project2
+https://github.com/emmapankey/JoinME
 ```
 
 ### Prerequisites
@@ -23,38 +27,47 @@ To confirm that you have npm installed you can run this command in your terminal
 npm -v
 ```
 
-### Installing Node Packages
+## Installing Node Packages
 
+In the terminal execute the following command to install all node dependencies (see package.json for list):
 
-In the terminal execute the following commands:
+```
+npm install
+```
+
+# Database Setup
+
+This app uses the dotenv node package to load environment variables from a .env file into process.env. This allows the database configuration to be stored in an environment separate from code.
+
+Create a .env file in the root of your directory and add the following code:
 
 ```
-npm install express
+DBUSER=root
+DBPASS=[enter your correct root password here]
+DB=projects_db
 ```
-```
-npm install body-parser
-```
-```
-npm install path
-```
-```
-npm install express-handlebars
-```
-```
-npm install mysql
-```
-```
-npm install method-override
-```
-```
-npm install bcrypt-nodejs
-```
-```
-npm install connect-flash
-```
-```
-npm install sequelize
-```
+
+You don’t need to build any tables. The Sequelize ORM will take care of that for you. Just open ‘joinme.sql’ in your MySQL workbench and run the sql script to create the database. Sequelize will create the following tables:
+
+user
+------
+- name: string
+- phone: string
+- password: string
+- email: string
+- uid: string
+
+project
+------
+- project_name: string
+- project_type: string
+- project_description: string
+
+step
+------
+- step: string
+- step_description: string
+- completed: boolean
 
 ## Run
 
@@ -63,6 +76,17 @@ To run the application and connect to the Express server execute the following c
 ```
 node server.js
 ```
+
+## Technologies Used
+
+* Javascript and jQuery
+* Node.js
+* Express.js to handle routing
+* Sequelize
+* bcrypt for password hashing
+* Passport for authentication
+* Handlebars.js for client-side templating
+
 
 ## Authors
 
